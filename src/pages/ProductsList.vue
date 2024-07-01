@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section class="container">
     <ul>
       <product-item
         v-for="prod in products"
@@ -14,19 +14,25 @@
   </section>
 </template>
 
-<script>
+<script async setup>
 import ProductItem from '../components/products/ProductItem.vue';
+import { computed, onBeforeMount} from 'vue';
+import { useStore } from 'vuex';
+import axios from 'axios';
+import config from '../config';
 
-export default {
-  components: {
-    ProductItem,
-  },
-  computed: {
-    products() {
-      return this.$store.getters['prods/products']
-    }
-  }
-};
+var store = useStore();
+const products = computed(() => {
+  return store.getters['prods/products'];
+})
+
+onBeforeMount(() => {
+  console.log('Hello World');
+})
+
+await axios.get(config.baseUrl+'/greeting').then((res) => {
+  console.log(res);
+})
 </script>
 
 <style scoped>

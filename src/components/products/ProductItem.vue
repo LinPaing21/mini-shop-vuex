@@ -12,7 +12,7 @@
         <p>{{ description }}</p>
       </div>
     </div>
-    <div class="product__actions">
+    <div class="product__actions mt-2">
       <button @click="addToCart">Add to Cart</button>
     </div>
   </li>

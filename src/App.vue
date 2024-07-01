@@ -1,15 +1,26 @@
 <template>
   <the-header></the-header>
-  <router-view></router-view>
+  <Suspense>
+    <!-- component with nested async dependencies -->
+    <router-view></router-view>
+
+    <!-- loading state via #fallback slot -->
+    <template #fallback>
+      Loading...
+    </template>
+</Suspense>
+  <bottom-nav></bottom-nav>
 </template>
 
 <script>
 import TheHeader from './components/nav/TheHeader.vue';
+import BottomNav from './components/nav/BottomNav.vue';
 
 export default {
   components: {
-    TheHeader
-  }
+    TheHeader,
+    BottomNav
+}
 };
 </script>
 

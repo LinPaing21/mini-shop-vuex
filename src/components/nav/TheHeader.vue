@@ -1,7 +1,7 @@
 <template>
   <header>
     <h1>
-      <router-link to="/">VueShop</router-link>
+      <router-link to="/">V</router-link>
     </h1>
     <nav>
       <ul>

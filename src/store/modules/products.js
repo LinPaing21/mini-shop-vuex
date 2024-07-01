@@ -15,7 +15,7 @@ export default {
         {
           id: 'p2',
           image:
-            'https://eu.alpkit.com/cdn/shop/products/zhota-action1_13d19515-99ad-4838-bd65-5379dd255e68.jpg?crop=center&height=800&v=1690462060&width=1440',
+            'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQm5pqx7prCcq4Hi1DEbGugjYICaPKJisr_1g&s',
           title: 'Mountain Tent',
           description: 'A tent for the ambitious outdoor tourist.',
           price: 129.99,

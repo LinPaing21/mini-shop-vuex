@@ -5,6 +5,9 @@ import store from './store/index.js'
 import App from './App.vue';
 import BaseBadge from './components/ui/BaseBadge.vue';
 
+import "bootstrap/dist/css/bootstrap.min.css"
+import "bootstrap"
+
 const app = createApp(App)
 
 app.use(router);
